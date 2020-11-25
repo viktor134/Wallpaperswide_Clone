@@ -1,0 +1,6 @@
+{
+    "require": {
+        "symfony/routing": "^5.1",
+        "robmorgan/phinx": "^0.12.4"
+    }
+}
