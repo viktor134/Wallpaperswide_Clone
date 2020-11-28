@@ -4,7 +4,7 @@ return
 [
     'paths' => [
         'migrations' => 'databases/migrations',
-        'seeds' => 'databeses/seeds',
+        'seeds' => 'databases/seeds',
     ],
     'environments' => [
         'default_migration_table' => 'phinxlog',
