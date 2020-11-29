@@ -3,15 +3,24 @@
 namespace  App\Controllers;
 
 use App\Services\Controllers;
+use Twig\Environment;
 
 
 
 class HomeController extends Controllers
 {
-   public function index()
+    private $view;
+
+   public function __construct(Environment $view)
    {
-       //dd("help");
-     include "../public/testView.php";
+       $this->view=$view;
+   }
+
+    public function index()
+   {
+
+       echo $this->view->render('main.html.twig');
+
    }
 }
 

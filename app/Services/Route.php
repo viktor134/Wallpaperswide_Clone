@@ -2,8 +2,9 @@
 
 namespace App\Services;
 
-
-
+use DI\Container;
+use FastRoute\Dispatcher;
+use App\Services\DI_Container;
 
 class Route
 {
@@ -19,18 +20,25 @@ class Route
 
        $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
        switch ($routeInfo[0]) {
-           case  \FastRoute\Dispatcher::NOT_FOUND:
+           case  Dispatcher::NOT_FOUND:
                // ... 404 Not Found
                break;
-           case \FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
+           case Dispatcher::METHOD_NOT_ALLOWED:
                $allowedMethods = $routeInfo[1];
                // ... 405 Method Not Allowed
                break;
-           case  \FastRoute\Dispatcher::FOUND:
+           case  Dispatcher::FOUND:
                $handler = $routeInfo[1];
                $vars = $routeInfo[2];
 
-               call_user_func($handler);
+
+//              $container=new Container();
+//
+//              $container->call($handler,$vars);
+
+              $container=DI_Container::configure_container();
+              $container->call($handler,$vars);
+
 
 
                break;
