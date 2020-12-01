@@ -2,26 +2,21 @@
 
 namespace  App\Controllers;
 
-use App\Services\Controllers;
-use Twig\Environment;
+use App\Services\BaseController;
 
 
 
-class HomeController extends Controllers
+
+class HomeController extends BaseController
 {
-    private $view;
-
-   public function __construct(Environment $view)
-   {
-       $this->view=$view;
-   }
 
     public function index()
    {
-
        echo $this->view->render('main.html.twig');
 
    }
+
+
 }
 
 
