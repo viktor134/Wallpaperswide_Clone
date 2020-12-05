@@ -10,7 +10,7 @@ class Model
 
     public function __construct($table)
     {
-        $this->table=$table;
+
     }
 
     protected  static function   all(){
