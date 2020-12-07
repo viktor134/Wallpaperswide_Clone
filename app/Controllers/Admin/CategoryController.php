@@ -5,7 +5,10 @@ namespace App\Controllers\Admin;
 
 
 use App\Services\Controller;
-use http\Env;
+use App\Models\Category;
+use App\Services\Redirect;
+use App\Services\Request;
+
 
 class CategoryController extends Controller
 {
@@ -19,27 +22,18 @@ class CategoryController extends Controller
       echo  $this->view->render("dashboard/category/create.html.twig");
     }
 
-    public  function   store()
+    public  function   store(Request $request)
     {
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "root";
-        $dbname = "myproject";
+        $name=$request->input("text");
+        $category=new Category;
+        $category->create($name);
 
-        $pdo = new \PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        Redirect::view('Location:/admins/category');
 
-        $result = $_POST["text"];
-
-        $sql = "INSERT INTO  category (name) VALUES (:name)";
-        $statement = $pdo->prepare($sql);
-        $statement->execute([
-            "name" => $result
-        ]);
-
-       header("Location:/admins/category");
-       die();
     }
+
+
 
 
 

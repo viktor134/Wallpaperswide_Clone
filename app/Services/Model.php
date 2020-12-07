@@ -3,26 +3,37 @@
 
 namespace App\Services;
 
+use PDO;
 
-class Model
+class  Model
 {
-    protected  $table;
 
-    public function __construct($table)
+    protected $pdo;
+
+
+
+ public function __construct()
     {
+        $connection=(require __DIR__ . "\../../config/setting.php")['db'];
+
+
+      $this->pdo=new PDO(
+            'mysql:host=' .$connection['host'] . ';dbname=' . $connection['dbname'],
+             $connection['user'],
+             $connection['password']
+        );
+
+
+
+
+
+
 
     }
 
-    protected  static function   all(){
 
-   }
 
-   protected  static  function   getById(){
 
-   }
 
-   protected  static function   create (){
-
-   }
 
 }

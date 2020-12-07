@@ -21,7 +21,7 @@ return
         'development' => [
             'adapter' => 'mysql',
             'host' => 'localhost',
-            'name' => 'myProject',
+            'name' => 'myproject',
             'user' => 'root',
             'pass' => 'root',
             'port' => '3306',
