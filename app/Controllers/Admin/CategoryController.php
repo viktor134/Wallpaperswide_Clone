@@ -14,7 +14,13 @@ class CategoryController extends Controller
 {
     public  function  index()
     {
-      echo  $this->view->render("dashboard/category/index.html.twig");
+      $category=new Category;
+      $category=$category->get();
+
+
+      dd($category);
+      //echo  $this->view->render("dashboard/category/index.html.twig", ["categories"=>$category]);
+      //
     }
 
     public function  create()
@@ -33,6 +39,7 @@ class CategoryController extends Controller
 
     }
 
+ 
 
 
 

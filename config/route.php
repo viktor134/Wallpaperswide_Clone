@@ -14,6 +14,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
         $r->addRoute('GET','/category',["App\Controllers\Admin\CategoryController", "index"]);
         $r->addRoute('GET','/category/create',["App\Controllers\Admin\CategoryController","create"]);
         $r->addRoute('POST','/category/create',["App\Controllers\Admin\CategoryController","store"]);
+       
 
 
     });

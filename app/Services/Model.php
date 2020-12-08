@@ -5,7 +5,7 @@ namespace App\Services;
 
 use PDO;
 
-class  Model
+class   Model
 {
 
     protected $pdo;

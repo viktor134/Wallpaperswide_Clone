@@ -4,9 +4,11 @@
 namespace App\Models;
 
 use  App\Services\Model;
+use Pdo;
 
 
-class Category extends  Model
+
+class Category extends  Model 
 
 {
     protected  $table="category";
@@ -18,6 +20,13 @@ class Category extends  Model
         $statement = $this->pdo->prepare($sql);
         $statement->execute([
             "name"=>$data]);
+    }
+
+    public  function get(){
+        $sql="SELECT * FROM $this->table";
+        $statement=$this->pdo->prepare($sql);
+        $statement->execute();
+        return $category=$statement->fetchAll(PDO::FETCH_OBJ);
     }
 
 

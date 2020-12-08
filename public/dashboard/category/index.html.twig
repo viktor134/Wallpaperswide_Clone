@@ -41,8 +41,11 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {% for categories in category %}
+
                                 <tr>
-                                    <td>1</td>
+
+                                    <td>{{[category.name]}}</td>
                                     <td>Города</td>
                                     <td>
                                         <a href="#" class="btn btn-info">
@@ -56,7 +59,7 @@
                                         </a>
                                     </td>
                                 </tr>
-
+                             {% endfor %}
 
                                 </tbody>
                                 <tfoot>
