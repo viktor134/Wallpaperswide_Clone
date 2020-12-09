@@ -2,8 +2,8 @@
 
 namespace  App\Services;
 
-use Twig\Environment;
-use Twig\Loader\ArrayLoader;
+
+use League\Plates\Engine;
 
 class Controller
 {
@@ -11,7 +11,7 @@ class Controller
 
 
 
-    function __construct(Environment  $view)
+    function __construct(Engine $view)
     {
         $this->view=$view;
     }

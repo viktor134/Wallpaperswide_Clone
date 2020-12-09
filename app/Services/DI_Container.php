@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use DI\ContainerBuilder;
+use League\Plates\Engine;
 use Twig\Environment;
 use Twig\Loader\ArrayLoader;
 use Twig\Loader\FilesystemLoader;
@@ -15,14 +16,9 @@ class DI_Container
     {
         $containerBuilder = new  ContainerBuilder;
         $containerBuilder->addDefinitions([
-
-
-            Environment::class => function () {
-
-
-                return new Environment(new  FilesystemLoader("/"));
-            }
-
+           Engine::class=>function(){
+             return new Engine("../public/");
+           }
 
 
 

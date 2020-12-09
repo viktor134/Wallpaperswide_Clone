@@ -25,10 +25,6 @@ class ComposerStaticInitc42404e72d216b9312d62b9b3e3defec
     );
 
     public static $prefixLengthsPsr4 = array (
-        'T' => 
-        array (
-            'Twig\\' => 5,
-        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -56,6 +52,10 @@ class ComposerStaticInitc42404e72d216b9312d62b9b3e3defec
         array (
             'Opis\\Closure\\' => 13,
         ),
+        'L' => 
+        array (
+            'League\\Plates\\' => 14,
+        ),
         'I' => 
         array (
             'Invoker\\' => 8,
@@ -82,10 +82,6 @@ class ComposerStaticInitc42404e72d216b9312d62b9b3e3defec
     );
 
     public static $prefixDirsPsr4 = array (
-        'Twig\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/twig/twig/src',
-        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -157,6 +153,10 @@ class ComposerStaticInitc42404e72d216b9312d62b9b3e3defec
         'Opis\\Closure\\' => 
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
+        ),
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
         ),
         'Invoker\\' => 
         array (

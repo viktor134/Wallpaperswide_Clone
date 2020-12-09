@@ -9,7 +9,7 @@ class UserController extends  Controller
 {
 
     public  function  index(){
-      echo  $this->view->render("dashboard/user/index.html.twig");
+      echo  $this->view->render("dashboard/user/index");
     }
 
 }

@@ -18,14 +18,14 @@ class CategoryController extends Controller
       $category=$category->get();
 
 
-      dd($category);
-      //echo  $this->view->render("dashboard/category/index.html.twig", ["categories"=>$category]);
+     // dd($category);
+     echo $this->view->render("dashboard/category/index",["categories"=>$category]);
       //
     }
 
     public function  create()
     {
-      echo  $this->view->render("dashboard/category/create.html.twig");
+      echo  $this->view->render("dashboard/category/create");
     }
 
     public  function   store(Request $request)

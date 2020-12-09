@@ -10,7 +10,7 @@ class ImageController extends Controller
 {
     public  function  index(){
 
-       echo $this->view->render("dashboard/image/index.html.twig");
+       echo $this->view->render("dashboard/image/index");
     }
     public  function  create(){
            dd("create img post");
