@@ -29,7 +29,7 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <a href="/image/create" class="btn btn-success btn-lg">Добавить</a> <br> <br>
+                                <a href="image/create" class="btn btn-success btn-lg">Добавить</a> <br> <br>
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>

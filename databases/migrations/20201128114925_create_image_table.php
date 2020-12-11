@@ -20,6 +20,8 @@ final class CreateImageTable extends AbstractMigration
     {
         $table=$this->table("image");
         $table->addColumn("name","string")
+                ->addColumn("description","string")
+                ->addColumn("image","string")
                ->addColumn("category_id",'integer')
                ->addColumn("download_count","integer")
         ->create();

@@ -44,13 +44,13 @@
                                <?foreach ($categories as $category):?>
                                 <tr>
 
-                                    <td><?=$category->id?></td>
-                                    <td><?=$category->name?></td>
+                                    <td><?=$category['id']?></td>
+                                    <td><?=$category['name']?></td>
                                     <td>
                                         <a href="#" class="btn btn-info">
                                             <i class="fa fa-eye"></i>
                                         </a>
-                                        <a href="edit.html" class="btn btn-warning">
+                                        <a href="category/<?=$category['id'];?>/edit" class="btn btn-warning" name="id">
                                             <i class="fa fa-pencil"></i>
                                         </a>
                                         <a href="#" class="btn btn-danger" onclick="return confirm('Вы уверены?');">
