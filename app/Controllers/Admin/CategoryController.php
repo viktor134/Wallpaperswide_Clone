@@ -10,12 +10,16 @@ use App\Services\Redirect;
 use App\Services\Request;
 
 
+
 class CategoryController extends Controller
 {
     public  function  index()
     {
       $category=new Category;
       $category=$category->get();
+
+
+
 
 
      // dd($category);
@@ -36,6 +40,8 @@ class CategoryController extends Controller
         $category->create($name);
 
         Redirect::view('Location:/admins/category');
+
+
 
     }
 

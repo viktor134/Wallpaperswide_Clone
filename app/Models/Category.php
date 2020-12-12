@@ -22,7 +22,7 @@ class Category extends  Model
             "name"=>$data]);
     }
 
-    public  function get(){
+   public  function get(){
         $sql="SELECT * FROM $this->table";
         $statement=$this->pdo->prepare($sql);
         $statement->execute();
