@@ -29,7 +29,7 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <a href="/image/create" class="btn btn-success btn-lg">Добавить</a> <br> <br>
+                                <a href="image/create" class="btn btn-success btn-lg">Добавить</a> <br> <br>
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
@@ -42,13 +42,14 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <?foreach($images as $image):?>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Мой любимый город</td>
+                                        <td><?=$image->id?></td>
+                                        <td><?=$image->name?></td>
                                         <td>Города</td>
                                         <td>Мурзилка</td>
                                         <td>
-                                            <img src="../assets/img/photo1.png" width="200">
+                                            <img src="/uploads/<?=$image->image?>" width="200">
                                         </td>
                                         <td>
                                             <a href="#" class="btn btn-info">
@@ -63,58 +64,9 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Животный мир</td>
-                                        <td>Фауна</td>
-                                        <td>Котопес</td>
-                                        <td>
-                                            <img src="../assets/img/photo2.png" width="200">
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-info">
-                                                <i class="fa fa-eye"></i>
-                                            </a>
-                                            <a href="edit.html" class="btn btn-warning">
-                                                <i class="fa fa-pencil"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" onclick="return confirm('Вы уверены?');">
-                                                <i class="fa fa-remove"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
 
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Технологии в 2018 году</td>
-                                        <td>Компьютеры</td>
-                                        <td>Marlin</td>
-                                        <td>
-                                            <img src="../assets/img/photo3.jpg" width="200">
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-info">
-                                                <i class="fa fa-eye"></i>
-                                            </a>
-                                            <a href="edit.html" class="btn btn-warning">
-                                                <i class="fa fa-pencil"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" onclick="return confirm('Вы уверены?');">
-                                                <i class="fa fa-remove"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                    <tfoot>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Название</th>
-                                        <th>Категория</th>
-                                        <th>Автор</th>
-                                        <th>Изображение</th>
-                                        <th>Действия</th>
-                                    </tr>
-                                    </tfoot>
+
+                               <?endforeach;?>
                                 </table>
                             </div>
                             <!-- /.box-body -->

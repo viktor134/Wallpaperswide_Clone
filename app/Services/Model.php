@@ -29,5 +29,11 @@ abstract class  Model
 
     abstract public function create($variable);
 
+    abstract  public  function getByID($id);
+
+    abstract  public  function  update($variable,$id);
+
+    abstract  public  function  delete($id);
+
 
 }

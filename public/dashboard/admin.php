@@ -1,8 +1,6 @@
 <?php $this->layout('layouts/admin')?>
 <?=$this->section('content')?>
 <div class="content-wrapper">
-
-
     <!-- Main content -->
     <section class="content container-fluid">
 

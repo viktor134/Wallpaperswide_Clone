@@ -1,4 +1,5 @@
-<?php $this->layout('layouts/admin')?>
+<?php $this->layout('layouts/admin') ?>
+
 <?=$this->section('content')?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -25,40 +26,21 @@
                 <div class="box-body">
                     <div class="">
                         <div class="box-header">
-                            <h2 class="box-title">Добавить изображение</h2>
+                            <h2 class="box-title">Изменить категорию</h2>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="col-md-6">
-                                <form action="create"  method="post" enctype="multipart/form-data">
+                                <form action="edit" method="post">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Название</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"  name="name">
+                                        <input type="text" class="form-control" id="exampleInputEmail1" value="<?=$category->name?>" name="text">
+
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Краткое описание</label>
-                                        <textarea class="form-control" name="description"></textarea>
-                                    </div>
 
-
-
-                                    <div class="form-group">
-                                        <label>Категория</label>
-                                        <select class="form-control select2" style="width: 100%;" name="category_id">
-                                            <?foreach ($categories as $category):?>
-                                            <option value="<?=$category->id?>"><?=$category->name?></option>
-                                          <?endforeach;?>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Изображение</label>
-                                        <input type="file" name="image">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button class="btn btn-success">Добавить</button>
+                                        <button class="btn btn-warning">Изменить</button>
                                     </div>
                                 </form>
                             </div>
@@ -81,4 +63,3 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-

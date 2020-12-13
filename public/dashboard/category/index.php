@@ -1,7 +1,5 @@
 <?php $this->layout('layouts/admin')?>
 <?=$this->section('content')?>
-
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
@@ -41,33 +39,34 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               <?foreach ($categories as $category):?>
+                                <?foreach ($categories as $category):?>
                                 <tr>
 
                                     <td><?=$category->id?></td>
                                     <td><?=$category->name?></td>
                                     <td>
-                                        <a href="#" class="btn btn-info">
-                                            <i class="fa fa-eye"></i>
-                                        </a>
-                                        <a href="edit.html" class="btn btn-warning">
+
+                                        <a href="category/<?=$category->id;?>/edit" class="btn btn-warning">
                                             <i class="fa fa-pencil"></i>
                                         </a>
-                                        <a href="#" class="btn btn-danger" onclick="return confirm('Вы уверены?');">
+                                        <a href="category/<?=$category->id;?>/delete" class="btn btn-danger" onclick="return confirm('Вы уверены?');">
                                             <i class="fa fa-remove"></i>
                                         </a>
                                     </td>
                                 </tr>
+                           <?endforeach;?>
 
-                               <?endforeach;?>
                                 </tbody>
 
 
                             </table>
+
                         </div>
                         <!-- /.box-body -->
                     </div>
                 </div>
+
+
                 <!-- /.box-body -->
                 <div class="box-footer">
                     По вопросам к главному администратору.
@@ -82,4 +81,4 @@
     </section>
     <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
+
