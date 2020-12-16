@@ -30,11 +30,11 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
 
-        $name = $request->input('text');
+        $title = $request->input('text');
 
         $category = new Category;
 
-        $category->create($name);
+        $category->create($title);
 
         Redirect::view('Location:/admins/category');
 
@@ -58,11 +58,11 @@ class CategoryController extends Controller
     {
 
 
-        $name = $request->input("text");
+        $title = $request->input("text");
 
         $category = new Category;
 
-        $category->update($name, $id);
+        $category->update($title, $id);
 
         Redirect::view("Location:/admins/category");
 

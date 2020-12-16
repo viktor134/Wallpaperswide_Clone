@@ -47,7 +47,7 @@
                                         <label>Категория</label>
                                         <select class="form-control select2" style="width: 100%;" name="category_id">
                                             <?foreach ($categories as $category):?>
-                                            <option value="<?=$category->id?>"><?=$category->name?></option>
+                                            <option value="<?=$category->id?>"><?=$category->title?></option>
                                           <?endforeach;?>
                                         </select>
                                     </div>

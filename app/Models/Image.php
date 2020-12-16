@@ -47,4 +47,17 @@ class Image extends  Model
         // TODO: Implement delete() method.
     }
 
+    public  function  oneToMany()
+    {
+        $sql="select  image.id,image.name, image.description,image.image,category.title
+         FROM  $this->table  INNER JOIN category  on image.category_id=category.id";
+        $statement=$this->pdo->prepare($sql);
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_OBJ);
+    }
+
+
+
+
+
 }

@@ -16,10 +16,10 @@ class Category extends  Model
 
     public  function  create($data){
 
-        $sql = "INSERT INTO  $this->table (name) VALUES (:name)";
+        $sql = "INSERT INTO  $this->table (title) VALUES (:title)";
         $statement = $this->pdo->prepare($sql);
         $statement->execute([
-            "name"=>$data]);
+            "title"=>$data]);
     }
 
    public  function get(){
@@ -39,7 +39,7 @@ class Category extends  Model
 
     }
     public  function  update($data,$id){
-        $sql="UPDATE $this->table SET name=? WHERE id=?";
+        $sql="UPDATE $this->table SET  title=? WHERE id=?";
         $statement=$this->pdo->prepare($sql);
         $statement->bindValue(1,$data);
         $statement->bindValue(2,$id);

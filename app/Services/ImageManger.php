@@ -20,12 +20,12 @@ class ImageManger implements Image
 
 
     }
-    public static function update()
+    public static function update($id,$f)
     {
         // TODO: Implement update() method.
     }
 
-    public  static function delete()
+    public  static function delete($d)
     {
         // TODO: Implement delete() method.
     }

@@ -30,7 +30,9 @@
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <a href="image/create" class="btn btn-success btn-lg">Добавить</a> <br> <br>
+
                                 <table id="example1" class="table table-bordered table-striped">
+
                                     <thead>
                                     <tr>
                                         <th>#</th>
@@ -41,13 +43,27 @@
                                         <th>Действия</th>
                                     </tr>
                                     </thead>
+
                                     <tbody>
-                                    <?foreach($images as $image):?>
+
+                                        <?foreach($images as $image) :?>
+
+
+
+
                                     <tr>
+
                                         <td><?=$image->id?></td>
                                         <td><?=$image->name?></td>
-                                        <td>Города</td>
-                                        <td>Мурзилка</td>
+
+
+                                        <td>
+                                            <?=$image->title?>
+                                      </td>
+
+
+                                        <td></td>
+
                                         <td>
                                             <img src="/uploads/<?=$image->image?>" width="200">
                                         </td>
@@ -64,9 +80,11 @@
                                         </td>
                                     </tr>
 
+                                            <?endforeach;?>
 
 
-                               <?endforeach;?>
+
+
                                 </table>
                             </div>
                             <!-- /.box-body -->

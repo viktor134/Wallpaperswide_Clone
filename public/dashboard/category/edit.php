@@ -34,7 +34,7 @@
                                 <form action="edit" method="post">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Название</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" value="<?=$category->name?>" name="text">
+                                        <input type="text" class="form-control" id="exampleInputEmail1" value="<?=$category->title?>" name="text">
 
                                     </div>
 

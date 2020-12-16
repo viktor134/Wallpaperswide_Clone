@@ -40,10 +40,11 @@
                                 </thead>
                                 <tbody>
                                 <?foreach ($categories as $category):?>
+
                                 <tr>
 
                                     <td><?=$category->id?></td>
-                                    <td><?=$category->name?></td>
+                                    <td><?=$category->title?></td>
                                     <td>
 
                                         <a href="category/<?=$category->id;?>/edit" class="btn btn-warning">
@@ -54,6 +55,7 @@
                                         </a>
                                     </td>
                                 </tr>
+
                            <?endforeach;?>
 
                                 </tbody>
