@@ -10,7 +10,7 @@ use App\Services\Controller;
 use App\Services\Redirect;
 use App\Services\Request;
 use App\Services\ImageManger;
-use League\Plates\Engine;
+
 
 
 class ImageController extends Controller
@@ -44,7 +44,7 @@ class ImageController extends Controller
 
         $data = ImageManger::upload("image", $data);
 
-        $image = new Image();
+        $image = new Image;
 
         $image->create($data);
 
@@ -52,8 +52,28 @@ class ImageController extends Controller
 
     }
 
-    public function edit()
+    public function edit($id,Image $i,Category $c)
     {
+        $category=$c->get();
+        $image=$i->getByID($id);
+               
+        echo $this->view->render("dashboard/image/edit",["image"=>$image,"categories"=>$category]);
+
+    }
+
+    public function update($id,Request $request)
+    {
+     
+        $data=$request->inputs(['name','description','category_id']);
+
+        $data=ImageManger::upload("image",$data);
+
+        $image=new Image;
+
+        $image->update($data,$id);
+
+         
+
 
     }
 }

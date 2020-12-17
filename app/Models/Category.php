@@ -44,6 +44,9 @@ class Category extends  Model
         $statement->bindValue(1,$data);
         $statement->bindValue(2,$id);
         $statement->execute();
+         
+        dd($res=$statement);
+       
     }
 
     public  function  delete($id){

@@ -4,13 +4,14 @@
 namespace App\Models;
 
 use App\Services\Model;
-Use PDO;
+use PDO;
 
 class Image extends  Model
 {
     protected  $table="image";
 
     public  function  create($data){
+        dd($data);
 
         $sql = "INSERT INTO  $this->table (name,description,category_id,image) VALUES (:name,:description,:category_id,:image)";
         $statement = $this->pdo->prepare($sql);
@@ -34,12 +35,33 @@ class Image extends  Model
 
     public function getByID($id)
     {
-        // TODO: Implement getByID() method.
+        $sql="SELECT * FROM $this->table WHERE id=?";
+        $statement=$this->pdo->prepare($sql);
+        $statement->bindParam(1,$id);
+        $statement->execute();
+        return $statement->fetch(PDO::FETCH_OBJ);
     }
 
-    public function update($variable, $id)
+    public function update($data, $id)
     {
-        // TODO: Implement update() method.
+        //dd($data);
+        
+        $sql="UPDATE $this->table SET name=?,description=?,category_id=?,image=?   WHERE id=?";
+
+        $statement=$this->pdo->prepare($sql);
+                    
+        $statement->bindValue(1,$data['name']);
+
+        $statement->bindValue(2,$data['description']);
+
+        $statement->bindValue(3,$data['category_id']);
+
+        $statement->bindValue(4,$data['image']);
+
+        $statement->bindValue(5,$id);
+
+        $statement->execute();
+
     }
 
     public function delete($id)

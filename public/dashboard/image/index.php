@@ -71,7 +71,7 @@
                                             <a href="#" class="btn btn-info">
                                                 <i class="fa fa-eye"></i>
                                             </a>
-                                            <a href="edit.html" class="btn btn-warning">
+                                            <a href="image/<?=$image->id?>/edit" class="btn btn-warning">
                                                 <i class="fa fa-pencil"></i>
                                             </a>
                                             <a href="#" class="btn btn-danger" onclick="return confirm('Вы уверены?');">

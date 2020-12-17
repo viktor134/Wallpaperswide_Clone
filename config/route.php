@@ -11,6 +11,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
         $r->addRoute('GET','/image',["App\Controllers\Admin\ImageController", "index"]);
         $r->addRoute('GET','/image/create',["App\Controllers\Admin\ImageController", "create"]);
         $r->addRoute('POST','/image/create',["App\Controllers\Admin\ImageController", "store"]);
+        $r->addRoute('GET','/image/{id:\d+}/edit',["App\Controllers\Admin\ImageController", "edit"]);
+        $r->addRoute('POST','/image/{id:\d+}/edit',["App\Controllers\Admin\ImageController", "update"]);
         $r->addRoute('GET','/user',["App\Controllers\Admin\UserController", "index"]);
         $r->addRoute('GET','/category',["App\Controllers\Admin\CategoryController", "index"]);
         $r->addRoute('GET','/category/create',["App\Controllers\Admin\CategoryController","create"]);
@@ -25,9 +27,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     });
 
      });
-//    $r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');
-//    // The /{title} suffix is optional
-//    $r->addRoute('GET', '/articles/{id:\d+}[/{title}]', 'get_article_handler');
+
 
         Route::dispatcher($dispatcher);
 
