@@ -11,7 +11,7 @@ class Image extends  Model
     protected  $table="image";
 
     public  function  create($data){
-        dd($data);
+      
 
         $sql = "INSERT INTO  $this->table (name,description,category_id,image) VALUES (:name,:description,:category_id,:image)";
         $statement = $this->pdo->prepare($sql);
@@ -44,23 +44,67 @@ class Image extends  Model
 
     public function update($data, $id)
     {
-        //dd($data);
-        
-        $sql="UPDATE $this->table SET name=?,description=?,category_id=?,image=?   WHERE id=?";
+    //dd($data);
+
+    if(!empty($data["name"]))
+       {
+        $sql="UPDATE $this->table SET name=?  WHERE id=?";
 
         $statement=$this->pdo->prepare($sql);
-                    
+                  
         $statement->bindValue(1,$data['name']);
 
-        $statement->bindValue(2,$data['description']);
-
-        $statement->bindValue(3,$data['category_id']);
-
-        $statement->bindValue(4,$data['image']);
-
-        $statement->bindValue(5,$id);
+        $statement->bindValue(2,$id);
 
         $statement->execute();
+       }
+       if(!empty($data["description"]))
+       {
+          // dd("tg");
+        $sql="UPDATE $this->table SET description=?  WHERE id=?";
+
+        $statement=$this->pdo->prepare($sql);
+                  
+        $statement->bindValue(1,$data['description']);
+
+        $statement->bindValue(2,$id);
+
+        $statement->execute();
+       }
+       
+       if(!empty($data["category_id"]))
+       {
+        $sql="UPDATE $this->table SET category_id=?  WHERE id=?";
+
+        $statement=$this->pdo->prepare($sql);
+                  
+        $statement->bindValue(1,$data['category_id']);
+
+        $statement->bindValue(2,$id);
+
+        $statement->execute();
+          
+       }
+       if(!empty($data["image"]))
+       {
+
+
+        $sql="UPDATE $this->table SET image=?  WHERE id=?";
+
+        $statement=$this->pdo->prepare($sql);
+                  
+        $statement->bindValue(1,$data['image']);
+
+        $statement->bindValue(2,$id);
+
+        $statement->execute();
+
+       }
+
+
+
+
+       
 
     }
 

@@ -65,12 +65,23 @@ class ImageController extends Controller
     {
      
         $data=$request->inputs(['name','description','category_id']);
+          
+        
+       
+         $data=ImageManger::update($id,$data);
+   
+  
+         $image=new Image;
 
-        $data=ImageManger::upload("image",$data);
+               
+         $image->update($data,$id);
 
-        $image=new Image;
 
-        $image->update($data,$id);
+         Redirect::view("Location:/admins/image");
+
+
+        
+       
 
          
 

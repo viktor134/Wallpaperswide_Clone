@@ -27,14 +27,13 @@ class Request
 
     public function inputs($params=[])
     {
-        //var_dump($params);
+       
         foreach ($params as $param){
            return $param=$_POST;
 
         }
         }
-        //dd($_REQUEST["image"],$_REQUEST["name"],$_REQUEST["description"]);
-        //dd($_POST );
+  
 
 
 
