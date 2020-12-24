@@ -4,7 +4,13 @@ use App\Services\Route;
 
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-    $r->addRoute('GET', '/users', ["App\Controllers\HomeController", "index"]);
+    $r->addGroup('/', function (FastRoute\RouteCollector $r) {
+        $r->addRoute('GET', '', ["App\Controllers\HomeController", "index"]);
+        $r->addRoute('GET', 'register', ["App\Controllers\HomeController", "index"]);
+    });
+
+
+
 
     $r->addGroup('/admins', function (FastRoute\RouteCollector $r) {
         $r->addRoute('GET', '', ["App\Controllers\Admin\AdminController", "index"]);
@@ -29,7 +35,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
      });
 
 
-        Route::dispatcher($dispatcher);
+Route::dispatcher($dispatcher);
 
 
 

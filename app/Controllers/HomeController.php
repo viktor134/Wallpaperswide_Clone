@@ -2,17 +2,17 @@
 
 namespace  App\Controllers;
 
-use App\Services\BaseController;
+use App\Services\Controller;
 
 
 
 
-class HomeController extends BaseController
+class HomeController extends Controller
 {
 
     public function index()
    {
-       echo $this->view->render('main.html.twig');
+       echo $this->view->render('page/index');
 
    }
 
