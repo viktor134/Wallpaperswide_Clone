@@ -72,9 +72,20 @@ class ImageManger implements img
     }
 
 
-    public static function delete($d)
+    public static function delete($id)
     {
-        // TODO: Implement delete() method.
+        $user=new Image;
+        $user=$user->getByID($id);
+
+      
+        if (is_file('../public/uploads/' . $user->image)) {
+            unlink('../public/uploads/' . $user->image);
+        }
+        return $id;
+     
+      
+      
+
     }
 
 

@@ -78,12 +78,21 @@ class ImageController extends Controller
 
 
          Redirect::view("Location:/admins/image");
-
-
         
-       
 
-         
+
+    }
+
+    public function destroy($id)
+    {
+        $data=ImageManger::delete($id);   //this imageManger 
+
+        $image=new Image;    //this image model
+
+        $image->delete($data);
+
+
+        Redirect::view("Location:/admins/image");
 
 
     }

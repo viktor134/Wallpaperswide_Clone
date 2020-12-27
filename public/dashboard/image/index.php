@@ -74,7 +74,7 @@
                                             <a href="image/<?=$image->id?>/edit" class="btn btn-warning">
                                                 <i class="fa fa-pencil"></i>
                                             </a>
-                                            <a href="#" class="btn btn-danger" onclick="return confirm('Вы уверены?');">
+                                            <a href="image/<?=$image->id?>/delete" class="btn btn-danger" onclick="return confirm('Вы уверены?');">
                                                 <i class="fa fa-remove"></i>
                                             </a>
                                         </td>

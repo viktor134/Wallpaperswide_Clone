@@ -110,7 +110,10 @@ class Image extends  Model
 
     public function delete($id)
     {
-        // TODO: Implement delete() method.
+        $sql="DELETE FROM  $this->table WHERE id=?";
+        $statement=$this->pdo->prepare($sql);
+        $statement->bindValue(1,$id);
+        $statement->execute();
     }
 
     public  function  oneToMany()

@@ -6,7 +6,8 @@ use App\Services\Route;
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addGroup('/', function (FastRoute\RouteCollector $r) {
         $r->addRoute('GET', '', ["App\Controllers\HomeController", "index"]);
-        $r->addRoute('GET', 'register', ["App\Controllers\HomeController", "index"]);
+        $r->addRoute('GET', 'register', ["App\Controllers\Page\RegisterController", "index"]);
+        $r->addRoute('POST', 'register', ["App\Controllers\Page\RegisterController", "store"]);
     });
 
 
@@ -19,6 +20,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
         $r->addRoute('POST','/image/create',["App\Controllers\Admin\ImageController", "store"]);
         $r->addRoute('GET','/image/{id:\d+}/edit',["App\Controllers\Admin\ImageController", "edit"]);
         $r->addRoute('POST','/image/{id:\d+}/edit',["App\Controllers\Admin\ImageController", "update"]);
+        $r->addRoute('GET','/image/{id:\d+}/delete',["App\Controllers\Admin\ImageController", "destroy"]);
         $r->addRoute('GET','/user',["App\Controllers\Admin\UserController", "index"]);
         $r->addRoute('GET','/category',["App\Controllers\Admin\CategoryController", "index"]);
         $r->addRoute('GET','/category/create',["App\Controllers\Admin\CategoryController","create"]);
