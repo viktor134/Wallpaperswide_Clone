@@ -1,17 +1,17 @@
 [
     {
         "name": "cakephp/core",
-        "version": "4.1.6",
-        "version_normalized": "4.1.6.0",
+        "version": "4.2.1",
+        "version_normalized": "4.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cakephp/core.git",
-            "reference": "6584be57b8c39b7e0c5cc0400cc796a55c8e5344"
+            "reference": "635a924ff9ddc2e2f81e9073643c59e7ed6f7f55"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cakephp/core/zipball/6584be57b8c39b7e0c5cc0400cc796a55c8e5344",
-            "reference": "6584be57b8c39b7e0c5cc0400cc796a55c8e5344",
+            "url": "https://api.github.com/repos/cakephp/core/zipball/635a924ff9ddc2e2f81e9073643c59e7ed6f7f55",
+            "reference": "635a924ff9ddc2e2f81e9073643c59e7ed6f7f55",
             "shasum": ""
         },
         "require": {
@@ -20,9 +20,10 @@
         },
         "suggest": {
             "cakephp/cache": "To use Configure::store() and restore().",
-            "cakephp/event": "To use PluginApplicationInterface or plugin applications."
+            "cakephp/event": "To use PluginApplicationInterface or plugin applications.",
+            "league/container": "To use Container and ServiceProvider classes"
         },
-        "time": "2020-10-21T22:39:20+00:00",
+        "time": "2020-12-03T14:30:58+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -53,17 +54,17 @@
     },
     {
         "name": "cakephp/database",
-        "version": "4.1.6",
-        "version_normalized": "4.1.6.0",
+        "version": "4.2.1",
+        "version_normalized": "4.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cakephp/database.git",
-            "reference": "0b7a2fa5eda7d86e84ceb9f8d4fa6ceadbf027ef"
+            "reference": "376b9c7c1bfe364452839fd351cf7a10bf4d75ae"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cakephp/database/zipball/0b7a2fa5eda7d86e84ceb9f8d4fa6ceadbf027ef",
-            "reference": "0b7a2fa5eda7d86e84ceb9f8d4fa6ceadbf027ef",
+            "url": "https://api.github.com/repos/cakephp/database/zipball/376b9c7c1bfe364452839fd351cf7a10bf4d75ae",
+            "reference": "376b9c7c1bfe364452839fd351cf7a10bf4d75ae",
             "shasum": ""
         },
         "require": {
@@ -74,7 +75,7 @@
         "suggest": {
             "cakephp/i18n": "If you are using locale-aware datetime formats or Chronos types."
         },
-        "time": "2020-11-02T18:08:55+00:00",
+        "time": "2020-12-14T09:13:32+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -104,17 +105,17 @@
     },
     {
         "name": "cakephp/datasource",
-        "version": "4.1.6",
-        "version_normalized": "4.1.6.0",
+        "version": "4.2.1",
+        "version_normalized": "4.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cakephp/datasource.git",
-            "reference": "8fdf6abbb84fb8a098f91b8e2ef2d18397d83f11"
+            "reference": "e1f9483f6d57e2799a34654d156bc08d5ff930ac"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cakephp/datasource/zipball/8fdf6abbb84fb8a098f91b8e2ef2d18397d83f11",
-            "reference": "8fdf6abbb84fb8a098f91b8e2ef2d18397d83f11",
+            "url": "https://api.github.com/repos/cakephp/datasource/zipball/e1f9483f6d57e2799a34654d156bc08d5ff930ac",
+            "reference": "e1f9483f6d57e2799a34654d156bc08d5ff930ac",
             "shasum": ""
         },
         "require": {
@@ -128,7 +129,7 @@
             "cakephp/collection": "If you decide to use ResultSetInterface.",
             "cakephp/utility": "If you decide to use EntityTrait."
         },
-        "time": "2020-10-19T19:03:43+00:00",
+        "time": "2020-12-09T02:44:24+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -158,17 +159,17 @@
     },
     {
         "name": "cakephp/utility",
-        "version": "4.1.6",
-        "version_normalized": "4.1.6.0",
+        "version": "4.2.1",
+        "version_normalized": "4.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cakephp/utility.git",
-            "reference": "302c697df8796198eae9429bb7f817cb79e6401c"
+            "reference": "d8e667953f13f399fea08a7e204b9e0f022d5d3c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cakephp/utility/zipball/302c697df8796198eae9429bb7f817cb79e6401c",
-            "reference": "302c697df8796198eae9429bb7f817cb79e6401c",
+            "url": "https://api.github.com/repos/cakephp/utility/zipball/d8e667953f13f399fea08a7e204b9e0f022d5d3c",
+            "reference": "d8e667953f13f399fea08a7e204b9e0f022d5d3c",
             "shasum": ""
         },
         "require": {
@@ -179,7 +180,7 @@
             "ext-intl": "To use Text::transliterate() or Text::slug()",
             "lib-ICU": "To use Text::transliterate() or Text::slug()"
         },
-        "time": "2020-10-19T19:03:43+00:00",
+        "time": "2020-12-04T14:13:14+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -209,216 +210,6 @@
             "security",
             "string",
             "utility"
-        ]
-    },
-    {
-        "name": "delight-im/auth",
-        "version": "v8.2.2",
-        "version_normalized": "8.2.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/delight-im/PHP-Auth.git",
-            "reference": "729c76668fa638769ab834c904d50696686797e9"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/delight-im/PHP-Auth/zipball/729c76668fa638769ab834c904d50696686797e9",
-            "reference": "729c76668fa638769ab834c904d50696686797e9",
-            "shasum": ""
-        },
-        "require": {
-            "delight-im/base64": "^1.0",
-            "delight-im/cookie": "^3.1",
-            "delight-im/db": "^1.3",
-            "ext-openssl": "*",
-            "php": ">=5.6.0"
-        },
-        "time": "2020-09-30T18:40:54+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Delight\\Auth\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Authentication for PHP. Simple, lightweight and secure.",
-        "homepage": "https://github.com/delight-im/PHP-Auth",
-        "keywords": [
-            "Authentication",
-            "auth",
-            "login",
-            "security"
-        ]
-    },
-    {
-        "name": "delight-im/base64",
-        "version": "v1.0.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/delight-im/PHP-Base64.git",
-            "reference": "687b2a49f663e162030a8d27b32838bbe7f91c78"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/delight-im/PHP-Base64/zipball/687b2a49f663e162030a8d27b32838bbe7f91c78",
-            "reference": "687b2a49f663e162030a8d27b32838bbe7f91c78",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "time": "2017-07-24T18:59:51+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Delight\\Base64\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Simple and convenient Base64 encoding and decoding for PHP",
-        "homepage": "https://github.com/delight-im/PHP-Base64",
-        "keywords": [
-            "URL-safe",
-            "base-64",
-            "base64",
-            "decode",
-            "decoding",
-            "encode",
-            "encoding",
-            "url"
-        ]
-    },
-    {
-        "name": "delight-im/cookie",
-        "version": "v3.4.0",
-        "version_normalized": "3.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/delight-im/PHP-Cookie.git",
-            "reference": "67065d34272377d63bab0bd58f984f9b228c803f"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/delight-im/PHP-Cookie/zipball/67065d34272377d63bab0bd58f984f9b228c803f",
-            "reference": "67065d34272377d63bab0bd58f984f9b228c803f",
-            "shasum": ""
-        },
-        "require": {
-            "delight-im/http": "^2.0",
-            "php": ">=5.4.0"
-        },
-        "time": "2020-04-16T11:01:26+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Delight\\Cookie\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Modern cookie management for PHP",
-        "homepage": "https://github.com/delight-im/PHP-Cookie",
-        "keywords": [
-            "cookie",
-            "cookies",
-            "csrf",
-            "http",
-            "same-site",
-            "samesite",
-            "xss"
-        ]
-    },
-    {
-        "name": "delight-im/db",
-        "version": "v1.3.1",
-        "version_normalized": "1.3.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/delight-im/PHP-DB.git",
-            "reference": "7d6f4c7a7e8ba6a297bfc30d65702479fd0b5f7c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/delight-im/PHP-DB/zipball/7d6f4c7a7e8ba6a297bfc30d65702479fd0b5f7c",
-            "reference": "7d6f4c7a7e8ba6a297bfc30d65702479fd0b5f7c",
-            "shasum": ""
-        },
-        "require": {
-            "ext-pdo": "*",
-            "php": ">=5.6.0"
-        },
-        "time": "2020-02-21T10:46:03+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Delight\\Db\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Safe and convenient SQL database access in a driver-agnostic way",
-        "homepage": "https://github.com/delight-im/PHP-DB",
-        "keywords": [
-            "database",
-            "mysql",
-            "pdo",
-            "pgsql",
-            "postgresql",
-            "sql",
-            "sqlite"
-        ]
-    },
-    {
-        "name": "delight-im/http",
-        "version": "v2.0.0",
-        "version_normalized": "2.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/delight-im/PHP-HTTP.git",
-            "reference": "0a19a72a7eac8b1301aa972fb20cff494ac43e09"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/delight-im/PHP-HTTP/zipball/0a19a72a7eac8b1301aa972fb20cff494ac43e09",
-            "reference": "0a19a72a7eac8b1301aa972fb20cff494ac43e09",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "time": "2016-07-21T15:05:01+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Delight\\Http\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Hypertext Transfer Protocol (HTTP) utilities for PHP",
-        "homepage": "https://github.com/delight-im/PHP-HTTP",
-        "keywords": [
-            "headers",
-            "http",
-            "https"
         ]
     },
     {
@@ -1043,17 +834,17 @@
     },
     {
         "name": "symfony/config",
-        "version": "v5.2.0",
-        "version_normalized": "5.2.0.0",
+        "version": "v5.2.1",
+        "version_normalized": "5.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/config.git",
-            "reference": "fa1219ecbf96bb5db59f2599cba0960a0d9c3aea"
+            "reference": "d0a82d965296083fe463d655a3644cbe49cbaa80"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/config/zipball/fa1219ecbf96bb5db59f2599cba0960a0d9c3aea",
-            "reference": "fa1219ecbf96bb5db59f2599cba0960a0d9c3aea",
+            "url": "https://api.github.com/repos/symfony/config/zipball/d0a82d965296083fe463d655a3644cbe49cbaa80",
+            "reference": "d0a82d965296083fe463d655a3644cbe49cbaa80",
             "shasum": ""
         },
         "require": {
@@ -1076,7 +867,7 @@
         "suggest": {
             "symfony/yaml": "To use the yaml reference dumper"
         },
-        "time": "2020-11-16T18:02:40+00:00",
+        "time": "2020-12-09T18:54:12+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1120,17 +911,17 @@
     },
     {
         "name": "symfony/console",
-        "version": "v5.2.0",
-        "version_normalized": "5.2.0.0",
+        "version": "v5.2.1",
+        "version_normalized": "5.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/console.git",
-            "reference": "3e0564fb08d44a98bd5f1960204c958e57bd586b"
+            "reference": "47c02526c532fb381374dab26df05e7313978976"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/console/zipball/3e0564fb08d44a98bd5f1960204c958e57bd586b",
-            "reference": "3e0564fb08d44a98bd5f1960204c958e57bd586b",
+            "url": "https://api.github.com/repos/symfony/console/zipball/47c02526c532fb381374dab26df05e7313978976",
+            "reference": "47c02526c532fb381374dab26df05e7313978976",
             "shasum": ""
         },
         "require": {
@@ -1166,7 +957,7 @@
             "symfony/lock": "",
             "symfony/process": ""
         },
-        "time": "2020-11-28T11:24:18+00:00",
+        "time": "2020-12-18T08:03:05+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1282,24 +1073,24 @@
     },
     {
         "name": "symfony/filesystem",
-        "version": "v5.2.0",
-        "version_normalized": "5.2.0.0",
+        "version": "v5.2.1",
+        "version_normalized": "5.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/filesystem.git",
-            "reference": "bb92ba7f38b037e531908590a858a04d85c0e238"
+            "reference": "fa8f8cab6b65e2d99a118e082935344c5ba8c60d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/filesystem/zipball/bb92ba7f38b037e531908590a858a04d85c0e238",
-            "reference": "bb92ba7f38b037e531908590a858a04d85c0e238",
+            "url": "https://api.github.com/repos/symfony/filesystem/zipball/fa8f8cab6b65e2d99a118e082935344c5ba8c60d",
+            "reference": "fa8f8cab6b65e2d99a118e082935344c5ba8c60d",
             "shasum": ""
         },
         "require": {
             "php": ">=7.2.5",
             "symfony/polyfill-ctype": "~1.8"
         },
-        "time": "2020-11-12T09:58:18+00:00",
+        "time": "2020-11-30T17:05:38+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1901,17 +1692,17 @@
     },
     {
         "name": "symfony/string",
-        "version": "v5.2.0",
-        "version_normalized": "5.2.0.0",
+        "version": "v5.2.1",
+        "version_normalized": "5.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/string.git",
-            "reference": "40e975edadd4e32cd16f3753b3bad65d9ac48242"
+            "reference": "5bd67751d2e3f7d6f770c9154b8fbcb2aa05f7ed"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/string/zipball/40e975edadd4e32cd16f3753b3bad65d9ac48242",
-            "reference": "40e975edadd4e32cd16f3753b3bad65d9ac48242",
+            "url": "https://api.github.com/repos/symfony/string/zipball/5bd67751d2e3f7d6f770c9154b8fbcb2aa05f7ed",
+            "reference": "5bd67751d2e3f7d6f770c9154b8fbcb2aa05f7ed",
             "shasum": ""
         },
         "require": {
@@ -1928,7 +1719,7 @@
             "symfony/translation-contracts": "^1.1|^2",
             "symfony/var-exporter": "^4.4|^5.0"
         },
-        "time": "2020-10-24T12:08:07+00:00",
+        "time": "2020-12-05T07:33:16+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1983,17 +1774,17 @@
     },
     {
         "name": "symfony/var-dumper",
-        "version": "v5.2.0",
-        "version_normalized": "5.2.0.0",
+        "version": "v5.2.1",
+        "version_normalized": "5.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/var-dumper.git",
-            "reference": "173a79c462b1c81e1fa26129f71e41333d846b26"
+            "reference": "13e7e882eaa55863faa7c4ad7c60f12f1a8b5089"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/173a79c462b1c81e1fa26129f71e41333d846b26",
-            "reference": "173a79c462b1c81e1fa26129f71e41333d846b26",
+            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/13e7e882eaa55863faa7c4ad7c60f12f1a8b5089",
+            "reference": "13e7e882eaa55863faa7c4ad7c60f12f1a8b5089",
             "shasum": ""
         },
         "require": {
@@ -2016,7 +1807,7 @@
             "ext-intl": "To show region name in time zone dump",
             "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
         },
-        "time": "2020-11-27T00:39:34+00:00",
+        "time": "2020-12-16T17:02:19+00:00",
         "bin": [
             "Resources/bin/var-dump-server"
         ],

@@ -23,8 +23,10 @@ final class CreateUserTable extends AbstractMigration
               ->addColumn('surname','string')
               ->addColumn('email','string')
               ->addColumn('password','string')
-              ->addColumn('role_id','integer','null')
+              ->addColumn("auth_token",'string')
+              ->addColumn('role','string')
               ->addColumn('avatar','string')
+              ->addColumn('created_at','datetime')
               ->create();
               
 

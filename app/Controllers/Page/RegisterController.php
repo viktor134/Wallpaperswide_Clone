@@ -3,6 +3,10 @@
 namespace  App\Controllers\Page;
 
 use App\Services\Controller;
+use App\Services\Request;
+use App\Models\User;
+use InvalidArgumentException;
+
 
 class  RegisterController extends Controller
 {
@@ -11,38 +15,25 @@ class  RegisterController extends Controller
       echo $this->view->render("page/register");
     }
 
-    public  function  store()
+    public  function  store(Request $request)
     {
 
-        $host = '127.0.0.1';
-        $db   = 'test';
-        $user = 'root';
-        $pass = '';
-        $charset = 'utf8';
+        $create = $request->inputs(["name", "email", "password", "confirm"]);
 
-        $db=new \PDO();
-
-        $auth = new \Delight\Auth\Auth();
-
+        $user = new User;
         try {
-            $userId = $auth->register($_POST['email'], $_POST['password'], $_POST['username'], function ($selector, $token) {
-                echo 'Send ' . $selector . ' and ' . $token . ' to the user (e.g. via email)';
-            });
+            $user->create($create);
+        } catch (InvalidArgumentException $e) {
+            echo $this->view->render("page/register", ["error" => $e->getMessage()]);
+            return;
+        }
 
-            echo  'We have signed up a new user with the ID ' . $userId;
-        }
-        catch (\Delight\Auth\InvalidEmailException $e) {
-            die('Invalid email address');
-        }
-        catch (\Delight\Auth\InvalidPasswordException $e) {
-            die('Invalid password');
-        }
-        catch (\Delight\Auth\UserAlreadyExistsException $e) {
-            die('User already exists');
-        }
-        catch (\Delight\Auth\TooManyRequestsException $e) {
-            die('Too many requests');
-        }
+
+
+       $this->view->render("page/register");
+
+      // dd($create);
     }
+
 
 }

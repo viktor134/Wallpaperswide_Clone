@@ -9,6 +9,10 @@
             <h2 class="subtitle">
               Регистрация нового пользователя.
             </h2>
+
+              <?php if (!empty($error)): ?>
+                  <div style="background-color: red;padding: 5px;margin: 15px"><?= $error ?></div>
+              <?php endif; ?>
           </div>
         </div>
       </section>
@@ -20,7 +24,7 @@
                 <form action="/register"  method="post"
               <label class="label">Ваше имя</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text">
+                <input class="input" type="text" name="name" value="<?=$_POST['name']?>">
                 <span class="icon is-small is-left">
                   <i class="fas fa-user"></i>
                 </span>
@@ -30,7 +34,7 @@
             <div class="field">
               <label class="label">Email</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="input" type="email" >  <!-- is-danger -->
+                <input class="input" type="email"  name="email">  <!-- is-danger -->
                 <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
                 </span>
@@ -54,7 +58,7 @@
             <div class="field">
               <label class="label">Подтвердите пароль</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="input" type="password">
+                <input class="input" type="password" name="confirm">
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>

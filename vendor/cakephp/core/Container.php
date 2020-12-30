@@ -11,20 +11,21 @@ declare(strict_types=1);
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
  * @link          https://cakephp.org CakePHP(tm) Project
- * @since         3.0.0
+ * @since         4.2.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
-namespace Cake\Datasource\Exception;
+namespace Cake\Core;
 
-use Cake\Core\Exception\CakeException;
+use League\Container\Container as LeagueContainer;
 
 /**
- * Used when a model cannot be found.
+ * Dependency Injection container
+ *
+ * Based on the container out of League\Container
+ *
+ * @experimental This class' interface is not stable and may change
+ *   in future minor releases.
  */
-class MissingModelException extends CakeException
+class Container extends LeagueContainer implements ContainerInterface
 {
-    /**
-     * @var string
-     */
-    protected $_messageTemplate = 'Model class "%s" of type "%s" could not be found.';
 }
