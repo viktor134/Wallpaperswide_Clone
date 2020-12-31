@@ -11,11 +11,16 @@
             </h2>
 
               <?php if (!empty($error)): ?>
-                  <div style="background-color: red;padding: 5px;margin: 15px"><?= $error ?></div>
+                  <div class="alert alert-danger" role="alert">
+                      <?=$error?>
+                  </div>
               <?php endif; ?>
-          </div>
+
         </div>
       </section>
+
+
+
       <div class="container main-content">
         <div class="columns">
           <div class="column"></div>
@@ -68,7 +73,7 @@
             <div class="field">
               <div class="control">
                 <label class="checkbox">
-                  <input type="checkbox">
+                  <input type="checkbox" name="checkbox">
                   Я согласен с <a href="#">правилами сайта</a>
                 </label>
               </div>

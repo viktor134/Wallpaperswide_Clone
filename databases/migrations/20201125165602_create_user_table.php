@@ -20,10 +20,10 @@ final class CreateUserTable extends AbstractMigration
     {
         $table=$this->table('users');
         $table->addColumn('name','string')
-              ->addColumn('surname','string')
               ->addColumn('email','string')
               ->addColumn('password','string')
               ->addColumn("auth_token",'string')
+              ->addColumn("isConfirmed","boolean")
               ->addColumn('role','string')
               ->addColumn('avatar','string')
               ->addColumn('created_at','datetime')

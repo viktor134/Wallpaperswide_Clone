@@ -11,7 +11,7 @@ use Pdo;
 class Category extends  Model 
 
 {
-    protected  $table="category";
+    private $table="category";
 
 
     public  function  create($data){

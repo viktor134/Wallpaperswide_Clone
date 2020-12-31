@@ -4,24 +4,31 @@ namespace App\Models;
 
 use App\Services\Model;
 use InvalidArgumentException;
+use App\Services\Auth\Validation;
+
 
 
 class User  extends  Model
 {
+   private $table="users";
+
  public function create($data)
  {
-     if(!empty($data['name'])){
-         throw  new InvalidArgumentException('No Send Name');
-     }
-     if(empty($data['email'])){
-         throw  new InvalidArgumentException('No Send Email');
-     }
-     if(empty($data['password'])){
-         throw  new InvalidArgumentException('No Send ');
-     }
-     if(empty($data['confirm'])){
-         throw  new InvalidArgumentException('No Send Name');
-     }
+
+   Validation::inputs($data);
+   $sql="INSERT INTO $this->table (name,email,password,role,auth_token) 
+   VALUES (:name,:email,:password,:role,:auth_token)";
+   $statement=$this->pdo->prepare($sql);
+   $statement->execute([
+       "name"=>$data['name'],
+        "email"=>$data['email'],
+        "password"=>md5($data['password']),
+        "role"=>"user",
+        "auth_token"=>sha1(random_bytes(100))
+
+   ]);
+
+
  }
 
  public function get()
@@ -41,4 +48,5 @@ class User  extends  Model
  {
      // TODO: Implement update() method.
  }
+
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace  App\Controllers\Page;
+namespace App\Controllers\Page;
 
 use App\Services\Controller;
 use App\Services\Request;
@@ -12,27 +12,34 @@ class  RegisterController extends Controller
 {
     public function index()
     {
-      echo $this->view->render("page/register");
+        echo $this->view->render("page/register");
     }
 
-    public  function  store(Request $request)
+    public function store(Request $request)
     {
+
 
         $create = $request->inputs(["name", "email", "password", "confirm"]);
 
+
+
         $user = new User;
+
         try {
+
             $user->create($create);
+
         } catch (InvalidArgumentException $e) {
+
             echo $this->view->render("page/register", ["error" => $e->getMessage()]);
+
             return;
         }
 
 
+      echo  $this->view->render("page/sucess");
 
-       $this->view->render("page/register");
-
-      // dd($create);
+        // dd($create);
     }
 
 
