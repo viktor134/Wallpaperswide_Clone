@@ -45,7 +45,7 @@ class Category extends  Model
         $statement->bindValue(2,$id);
         $statement->execute();
          
-        dd($res=$statement);
+
        
     }
 

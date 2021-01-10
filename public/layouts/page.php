@@ -31,20 +31,21 @@
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link" href="category.html">
                             Категории
+
+
                         </a>
                         <div class="navbar-dropdown is-boxed">
                             <a class="navbar-item" href="category.html">
-                                Природа
+
                             </a>
+                            <?foreach ($categories as $category):?>
                             <a class="navbar-item" href="category.html">
-                                Машины
+
+                                    <?=$category->title?>
+
+                                <?endforeach;?>
                             </a>
-                            <a class="navbar-item" href="category.html">
-                                Дизайн и Интерьер
-                            </a>
-                            <a class="navbar-item" href="category.html">
-                                Животные
-                            </a>
+
                         </div>
                     </div>
                 </div>
