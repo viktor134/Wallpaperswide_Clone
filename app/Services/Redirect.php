@@ -12,7 +12,7 @@ trait Redirect
            header($name);
            die();
        }else{
-         echo  "type error";
+           dd("type error");
        }
        }
 

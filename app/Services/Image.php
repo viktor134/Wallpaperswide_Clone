@@ -10,5 +10,5 @@ interface Image
 
    public  static function  update($id,$var);
 
-   public  static  function   delete($id);
+   public  static  function  delete($id);
 }
