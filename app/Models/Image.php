@@ -8,7 +8,7 @@ use PDO;
 
 class Image extends  Model
 {
-    protected  $table="image";
+    private $table="image";
 
     public  function  create($data){
       
@@ -44,8 +44,7 @@ class Image extends  Model
 
     public function update($data, $id)
     {
-    //dd($data);
-
+    
     if(!empty($data["name"]))
        {
         $sql="UPDATE $this->table SET name=?  WHERE id=?";
@@ -101,10 +100,6 @@ class Image extends  Model
 
        }
 
-
-
-
-       
 
     }
 
