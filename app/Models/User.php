@@ -4,7 +4,6 @@ namespace App\Models;
 
 use App\Services\Model;
 use InvalidArgumentException;
-use App\Services\Auth\Validation;
 
 
 class User extends Model
@@ -13,15 +12,15 @@ class User extends Model
 
     public function create($data)
     {
-        $sql = "INSERT INTO $this->table (name,email,password,role,auth_token) 
-   VALUES (:name,:email,:password,:role,:auth_token)";
+        $sql = "INSERT INTO $this->table (name,email,password,role,token) 
+   VALUES (:name,:email,:password,:role,:token)";
         $statement = $this->pdo->prepare($sql);
         $statement->execute([
             "name" => $data['name'],
             "email" => $data['email'],
-            "password" => md5($data['password']),
+            "password" => crypt($data['password']),
             "role" => "user",
-            "auth_token" => sha1(random_bytes(100))
+            "token" => sha1(random_bytes(100))
 
         ]);
 

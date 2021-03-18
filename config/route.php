@@ -10,8 +10,9 @@ use App\Services\Route;
 
            $r->addGroup('/', function (FastRoute\RouteCollector $r) {
                $r->addRoute('GET', '', ["App\Controllers\HomeController", "index"]);
-               $r->addRoute('GET', 'register', ["App\Controllers\Page\RegisterController", "index"]);
-               $r->addRoute('POST', 'register', ["App\Controllers\Page\RegisterController", "store"]);
+               $r->addRoute('GET', 'register', ["App\Controllers\Auth\RegisterController", "index"]);
+               $r->addRoute('POST', 'register', ["App\Controllers\Auth\RegisterController", "sign_up"]);
+
            });
 
 
