@@ -20,10 +20,10 @@
         <div class="column"></div>
         <div class="column is-quarter auth-form">
             <div class="field">
-                <form action="/register" method="post"
+                <form action="/register" method="POST">
                 <label class="label">Ваше имя</label>
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="text" name="name" v-model="name">
+                    <input id="form-name"  class="input" type="text" name="name">
                     <span class="icon is-small is-left">
                   <i class="fas fa-user"></i>
                 </span>
@@ -33,7 +33,7 @@
             <div class="field">
                 <label class="label">Email</label>
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="email" name="email" v-model="email">  <!-- is-danger -->
+                    <input id="form-email" class="input" type="email" name="email">  <!-- is-danger -->
                     <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
                 </span>
@@ -45,9 +45,9 @@
             </div>
 
             <div class="field">
-                <label class="label">Пароль</label>
+                <label class="label" >Пароль</label>
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="password" name="password">
+                    <input id="form-password" class="input" type="password" name="password"  >
                     <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
@@ -57,7 +57,7 @@
             <div class="field">
                 <label class="label">Подтвердите пароль</label>
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="password" name="confirm">
+                    <input id="form-confirm" class="input" type="password" name="confirm">
                     <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
@@ -75,8 +75,11 @@
 
             <div class="field is-grouped">
                 <div class="control">
-                    <button class="button is-link">Зарегистрироваться</button>
+                    <button class="button is-link" type="submit" name="submit">Зарегистрироваться</button>
                 </div>
+           
+           <p id="form-message"></p>
+
                 <div class="control">
                     <a class="button is-text" href="index.html">Отмена</a>
                 </div>
@@ -89,7 +92,11 @@
     </div>
 </div>
 
+
+
 <script src="../components/validate.js"></script>
+
+
 
 
 

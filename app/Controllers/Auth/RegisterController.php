@@ -15,13 +15,29 @@ class RegisterController extends  Controller
         echo $this->view->render('page/register');
     }
 
-    public function   sign_up(Request $request)
+    public function   store(Request $request)
     {
+       
+      if(isset($_POST['submit'])){
+          $name=$_POST['name'];
+          $name=$_POST['email'];
+          $name=$_POST['password'];
+          $name=$_POST['confirm'];
 
-       $data=$request->inputs(['name','email','password']);
+          $errorEmpty=false;
+          $errorEmpty=false;
 
-       $user=new User();
+          if(empty($name)){
+              echo "<span class='icon is-small is-left'></span>";
+              $errorEmpty=true;
+          }
+      }
+       
 
-       $user->create($data);
+    //    $data=$request->inputs(['name','email','password']);
+
+    //    $user=new User();
+
+    //    $user->create($data);
     }
 }
